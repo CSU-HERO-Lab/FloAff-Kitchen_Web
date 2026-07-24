@@ -299,43 +299,6 @@ h2.title {
   margin-top: 1.25rem;
 }
 
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
-  margin: 1.5rem 0;
-}
-
-.stat-card,
-.method-card {
-  border: 1px solid rgba(0, 47, 167, 0.14);
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(18, 24, 38, 0.06);
-}
-
-.stat-card {
-  min-height: 7.5rem;
-  padding: 1rem;
-  text-align: left;
-}
-
-.stat-value {
-  display: block;
-  color: #002fa7;
-  font-size: 1.65rem;
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-.stat-label {
-  display: block;
-  margin-top: 0.5rem;
-  color: #3a4252;
-  font-size: 0.92rem;
-  line-height: 1.35;
-}
-
 .image-placeholder {
   display: flex;
   align-items: center;
@@ -358,7 +321,7 @@ h2.title {
   align-items: center;
   justify-content: center;
   margin: 1.4rem auto 0 auto;
-  border: 1px solid rgba(0, 47, 167, 0.14);
+  border: 0;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
@@ -376,16 +339,21 @@ h2.title {
   margin-bottom: 2rem;
 }
 
+.method-figure img {
+  width: 82%;
+}
+
 .method-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
+  max-width: 58rem;
+  gap: 2.5rem;
+  margin: 1.5rem auto 0 auto;
 }
 
 .method-card {
   position: relative;
-  padding: 1.25rem;
+  padding: 0;
   text-align: left;
 }
 
@@ -431,10 +399,10 @@ h2.title {
 }
 
 .modern-table-wrap {
-  border: 1px solid rgba(0, 47, 167, 0.14);
-  border-radius: 8px;
+  border: 1px solid rgba(18, 24, 38, 0.1);
+  border-radius: 6px;
   overflow-x: auto;
-  box-shadow: 0 8px 24px rgba(18, 24, 38, 0.06);
+  box-shadow: none;
 }
 
 .modern-table {
@@ -455,7 +423,7 @@ h2.title {
 
 .modern-table td {
   border-width: 0 0 1px 0 !important;
-  border-color: rgba(18, 24, 38, 0.08) !important;
+  border-color: rgba(18, 24, 38, 0.06) !important;
   color: #26303f;
   vertical-align: middle;
 }
@@ -468,6 +436,13 @@ h2.title {
   background: rgba(0, 47, 167, 0.055);
 }
 
+.modern-table .dataset-cell {
+  background: rgba(0, 47, 167, 0.035);
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+}
+
 .compact-table {
   max-width: 46rem;
   margin-right: auto;
@@ -475,7 +450,6 @@ h2.title {
 }
 
 @media screen and (max-width: 768px) {
-  .stat-grid,
   .method-grid {
     grid-template-columns: 1fr;
   }
